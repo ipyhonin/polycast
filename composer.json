@@ -1,5 +1,5 @@
 {
-    "name": "leemason/polycast",
+    "name": "ipyhonin/polycast",
     "description": "Laravel Websocket broadcasting polyfill using ajax and mysql.",
     "license": "MIT",
     "authors": [
