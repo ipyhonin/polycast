@@ -239,7 +239,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    if (response.payloads.hasOwnProperty(payload)) {
 	                        //foreach payload channels defer to channel class
 	                        for (i = 0; i < response.payloads[payload]['channels'].length; ++i) {
-	                            var channel = response.payloads[payload]['channels'][i];
+	                            var channel = response.payloads[payload]['channels'][i].name;
 	                            //console.log('Polycast channel: ' + channel + ' received event: ' + response.payloads[payload]['event']);
 	                            for(index = 0; index < this.channels[channel].length; ++index){
 	                                //console.log(response.payloads[payload]);
