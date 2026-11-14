@@ -24,6 +24,22 @@ class PolycastBroadcaster implements Broadcaster
         $this->delete_old = (isset($config['delete_old'])) ? $config['delete_old'] : $this->delete_old;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function auth($request)
+    {
+        //
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function validAuthenticationResponse($request, $result)
+    {
+        //
+    }
+
     public function broadcast(array $channels, $event, array $payload = []){
         //delete events older than two minutes
         $this->db->table('polycast_events')->where('created_at', '<', Carbon::now()->subMinutes($this->delete_old)->toDateTimeString())->delete();
